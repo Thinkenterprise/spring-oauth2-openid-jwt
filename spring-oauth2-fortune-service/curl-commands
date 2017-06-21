@@ -1,0 +1,2 @@
+Authorization 
+curl -H "Authorization: Bearer $TOKEN" localhost:9001/resource/random

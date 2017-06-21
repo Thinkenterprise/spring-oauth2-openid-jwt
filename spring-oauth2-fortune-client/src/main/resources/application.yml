@@ -1,0 +1,15 @@
+
+fortune:
+  fallbackFortune: Local fortune configuration 
+  
+security:
+  oauth2:
+      client:
+          clientId: testClient
+          clientSecret: testClient
+          accessTokenUri: http://localhost:9999/uaa/oauth/token
+          grantType: client_credentials
+            
+  
+  
+    
