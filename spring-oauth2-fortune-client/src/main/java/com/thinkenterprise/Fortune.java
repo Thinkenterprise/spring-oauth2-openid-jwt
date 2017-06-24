@@ -22,11 +22,22 @@ public class Fortune {
         this.id = id;
     }
 
-    public String getText() {
+    
+	public String getText() {
         return text;
     }
 
     public void setText(String text) {
         this.text = text;
     }
+    
+    
+    @Override
+	public String toString() {
+		return text + id;
+	}
+
+    
+    
+    
 }

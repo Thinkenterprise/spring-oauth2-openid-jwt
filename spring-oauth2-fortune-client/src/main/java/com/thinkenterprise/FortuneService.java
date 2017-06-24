@@ -8,23 +8,19 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
-@EnableConfigurationProperties(FortuneProperties.class)
 public class FortuneService {
 
 	Logger logger = LoggerFactory.getLogger(FortuneService.class);
 
 	@Autowired
-	FortuneProperties fortuneProperties;
-
-	@Autowired
 	RestTemplate restTemplate;
 
 	public Fortune randomFortune() {
-		logger.info("CS: calling http://fortunes/random.");
+		logger.info("calling http://fortunes/random.");
 		
 		Fortune fortune = restTemplate.getForObject("http://localhost:9001/resource/random", Fortune.class);
 
-		logger.info("CR: received response from http://fortunes/random.");
+		logger.info("received response from http://fortunes/random." + fortune);
 		return fortune;
 	}
 

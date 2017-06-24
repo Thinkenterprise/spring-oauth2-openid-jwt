@@ -1,9 +1,6 @@
 server:
   port: 9999
   contextPath: /uaa
-  
-security:
-  sessions: if-required
  
 logging:
   level:

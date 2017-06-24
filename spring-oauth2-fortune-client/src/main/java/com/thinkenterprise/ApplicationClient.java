@@ -40,8 +40,7 @@ public class ApplicationClient {
 
     @Scheduled(initialDelay = 1000, fixedDelay = 5000)
         public void sendTracking() {
-            
-    	FortuneService fortuneService  = context.getBean(FortuneService.class);
-    	fortuneService.randomFortune();
+      FortuneService fortuneService  = context.getBean(FortuneService.class);
+      fortuneService.randomFortune();
     }
 }

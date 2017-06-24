@@ -36,7 +36,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @SpringBootApplication
-@RestController
+//@RestController
 public class ApplicationAuthorizationServer   {
 
 	
@@ -45,6 +45,7 @@ public class ApplicationAuthorizationServer   {
         SpringApplication.run(ApplicationAuthorizationServer.class, args);
     }
 	
+	/*
 	@RequestMapping("/authorizationserver")
 	public ResponseEntity<String> securedRequest(@RequestParam("code") String code) {
 		System.out.println(code);
@@ -73,7 +74,7 @@ public class ApplicationAuthorizationServer   {
 	  return user;
 	}
 	
-	
+	*/
 	
 	
    
