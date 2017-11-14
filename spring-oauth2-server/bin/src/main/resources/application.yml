@@ -1,0 +1,11 @@
+server:
+  port: 9999
+  contextPath: /uaa
+ 
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+  
+  

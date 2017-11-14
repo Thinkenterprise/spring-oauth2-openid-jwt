@@ -13,7 +13,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.thinkenterprise</groupId>
-	<artifactId>spring-pcf-server</artifactId>
+	<artifactId>spring-pcf-securityServer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
@@ -31,7 +31,8 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-
+			
+		
 
 		</dependencies>
 	</dependencyManagement>
@@ -41,8 +42,17 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
-
+		
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
@@ -55,7 +65,9 @@
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-jwt</artifactId>
 		</dependency>
+		
 
+		 
 	</dependencies>
 
 	<build>
@@ -96,6 +108,16 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
-
+		<repository>
+			<id>spring-snapshot</id>
+			<name>Spring Snapshot Repository</name>
+			<url>http://repo.spring.io/snapshot</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
 	</repositories>
 </project>

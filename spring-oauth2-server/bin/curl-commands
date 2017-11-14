@@ -1,0 +1,19 @@
+Authentification Code Flow 
+############################# 
+
+High Security 
+Refresh & Aacces Token for Long Time Validation 
+
+
+Authentification 
+curl -u user:password "localhost:9999/uaa/oauth/authorize?response_type=code&client_id=testClient&redirect_uri=http://localhost:9999" -I
+
+Token 
+curl -X POST -u testClient:testClient "localhost:9999/uaa/oauth/token?grant_type=authorization_code&code=aaAsCT&client_id=testClient&redirect_uri=http://localhost:9999"
+
+
+
+Client Credential Flow 
+############################
+
+curl -X POST -u testClient:testClient localhost:9999/uaa/oauth/token?grant_type=client_credentials

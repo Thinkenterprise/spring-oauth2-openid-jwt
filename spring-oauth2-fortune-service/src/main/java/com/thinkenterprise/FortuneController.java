@@ -14,7 +14,6 @@ public class FortuneController {
 	
 	Logger logger = LoggerFactory.getLogger(FortuneController.class);
 	
-	@Value("${cf.instance.index}")
 	private String indexName;
 	
 	@Autowired
@@ -24,7 +23,6 @@ public class FortuneController {
 	@RequestMapping("/random")
 	public Fortune fortune() {
 		logger.info("FortuneController:fortune called ...");
-		//Fortune fortune = new Fortune(1L, "Application index : " + indexName + " FortuneController Random Fake");
 		
 		Iterable<Fortune> result = fortuneRepository.randomFortunes();
 		
