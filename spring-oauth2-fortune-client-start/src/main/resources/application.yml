@@ -1,0 +1,15 @@
+
+fortune:
+  fallbackFortune: Local fortune configuration 
+  
+security:
+  oauth2:
+      client:
+          clientId: 
+          clientSecret: 
+          accessTokenUri: 
+          grantType: 
+            
+  
+  
+    
